@@ -31,7 +31,7 @@ class Solution(object):
             if (l1) or (l2) or (carry == 1):
                 result.next = ListNode(carry)
                 result = result.next
-
-        return head
+            else:
+                return head
                 
                 
