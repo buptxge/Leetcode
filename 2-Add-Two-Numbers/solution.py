@@ -17,7 +17,8 @@ class Solution(object):
         result = ListNode(0)
         head = result
         carry = 0
-        while (l1!= None) or (l2 != None):
+        while True:
+            has_next = False
             if l1 != None:
                 result.val += l1.val
                 l1 = l1.next
@@ -27,11 +28,10 @@ class Solution(object):
                 
             carry = result.val / 10
             result.val = result.val % 10
-            result.next = ListNode(carry)
-            result = result.next
-            
-        result.next = None
-        
+            if (l1.next) or (l2.next) or (carry == 1):
+                result.next = ListNode(carry)
+                result = result.next
+
         return head
                 
                 
