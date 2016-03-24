@@ -28,7 +28,7 @@ class Solution(object):
                 
             carry = result.val / 10
             result.val = result.val % 10
-            if (l1.next) or (l2.next) or (carry == 1):
+            if (l1) or (l2) or (carry == 1):
                 result.next = ListNode(carry)
                 result = result.next
 
