@@ -15,7 +15,7 @@ class Solution(object):
         dp = [[1 for i in xrange(n)] for j in xrange(n)]
         for i in xrange(n-1):
             if s[i] == s[i+1]:
-                dp[i][i+l] = 2
+                dp[i][i+1] = 2
                 
         for l in xrange(2,n):
             for i in xrange(n):
