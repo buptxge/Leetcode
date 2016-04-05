@@ -20,6 +20,10 @@ class Solution(object):
             
         if bin:
             result = '-'+result
-
-        return int(result)            
+        
+        if (int(result)>pow(2,31)-1) or (int(result)<-pow(2,31)+1):
+            return 0
+        else:
+            return(int(result))
+    
         
