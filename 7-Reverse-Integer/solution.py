@@ -15,7 +15,7 @@ class Solution(object):
         for i in range(len(s)):
             result += s[-i-1]
             
-        while (result[0] == '0'):
+        while (result[0] == '0') and (len(result)>1):
             result = result[1:]
             
         if bin:
