@@ -21,5 +21,5 @@ class Solution(object):
         if bin:
             result = '-'+result
 
-        return result            
+        return int(result)            
         
