@@ -8,6 +8,8 @@ class Solution(object):
         """
         if (x<0):
             return False
+        if (x==0):
+            return True
         
         power = int(math.log(x,10))
         while(power>0):
