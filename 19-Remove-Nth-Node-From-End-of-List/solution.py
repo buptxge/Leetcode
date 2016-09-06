@@ -11,8 +11,6 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
-        if head.next is None:
-            return None
     
         head1 = head
         for i in range(n-1):
@@ -26,5 +24,8 @@ class Solution(object):
             prev = head2
             head2 = head2.next
             
-        prev.next = head2.next
-        return head2_old
+        if prev is None:
+            return head2_old.next
+        else:
+            prev.next = head2.next
+            return head2_old
