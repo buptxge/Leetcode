@@ -16,9 +16,10 @@ class Solution(object):
     
         head1 = head
         for i in range(n-1):
-            head1 = haed1.next
+            head1 = head1.next
             
         head2 = head
+        head2_old = head2
         prev = None
         while head1.next is not None:
             head1 = head1.next
@@ -26,4 +27,4 @@ class Solution(object):
             head2 = head2.next
             
         prev.next = head2.next
-        return head2
+        return head2_old
