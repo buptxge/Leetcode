@@ -10,7 +10,7 @@ class Solution(object):
             if ch in ['(','[','{']:
                 stack.append(ch)
             else:
-                if not s:
+                if not stack:
                     return False
                 pop_ch = stack.pop()
                 if (ch == ')' and pop_ch != '(') or (ch == ']' and pop_ch != '[') or (ch == '{' and pop_ch != '}'):
