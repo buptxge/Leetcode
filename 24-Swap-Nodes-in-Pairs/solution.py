@@ -10,16 +10,14 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        cur = head
-        pre = ListNode()
-        pre.next = cur
+        pre = ListNode(0)
+        result = pre
+        pre.next = head
         
-        while cur and cur.next:
-            pre.next = cur.next
-            cur.next = cur.next.next
-            pre.next.next = cur
-            pre = cur
-            cur = cur.next
-            
-        return head
+        while pre.next and pre.next.next:
+            a = pre.next
+            b = pre.next.next
+            pre.next, a.next, b.next = b, b.next, a
+            pre = a
+        return result.next
             
