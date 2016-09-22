@@ -5,7 +5,6 @@
 #         self.next = None
 
 class Solution(object):
-    class Solution(object):
     def reverse(self, head, n):
         """
         Reverses the first n nodes of the list starting at the specified head
